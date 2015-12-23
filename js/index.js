@@ -7,7 +7,10 @@ require('../css/index.css');
 
 var Hello = React.createClass({
     render: function() {
-        return <div className="style">hello world</div>;
+        return <div className="style">
+            <h2>Hello World</h2>
+            <p></p>
+        </div>;
     }
 });
 

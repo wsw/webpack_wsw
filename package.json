@@ -15,7 +15,9 @@
     "react": "^0.14.2",
     "react-dom": "^0.14.2",
     "webpack": "^1.12.2",
-    "extract-text-webpack-plugin": "^0.9.1"
+    "extract-text-webpack-plugin": "^0.9.1",
+    "postcss-loader": "^0.8.0",
+    "cssnext-loader": "^1.0.1"
   },
   "keywords": [
     "webpack",

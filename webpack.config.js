@@ -2,12 +2,16 @@ var webpack = require('webpack');
 var CommonsChunkPlugin = require("webpack/lib/optimize/CommonsChunkPlugin");
 var UglifyJsPlugin = require("webpack/lib/optimize/UglifyJsPlugin");
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var AutoPrefixer = require('autoprefixer');
+var AutoReset = require('postcss-autoreset');
 
 module.exports = {
     entry: {
         index: "./js/index.js"
     },
-
+    resolve: {
+        extensions: ['', '.js', '.jsx']
+    },
     output: {
         path: __dirname,
         filename: "[name].js"
@@ -25,7 +29,7 @@ module.exports = {
             // Extract css files
             {
                 test: /\.css$/,
-                loader: ExtractTextPlugin.extract("style-loader", "css-loader")
+                loader: ExtractTextPlugin.extract("style-loader", "css-loader!postcss-loader!cssnext-loader")
             },
             // Optionally extract less files
             // or any other compile-to-css language
@@ -41,10 +45,14 @@ module.exports = {
     },
     plugins: [
         new ExtractTextPlugin("[name].css"),
-        new UglifyJsPlugin({
-            compress: {
-                warnings: false
-            }
-        })
-    ]
+        // new UglifyJsPlugin({
+        //     compress: {
+        //         warnings: false
+        //     }
+        // })
+    ],
+    postcss: [AutoPrefixer, AutoReset({reset: {
+      margin: 0,
+      padding: 0
+    }})]
 };
