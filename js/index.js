@@ -3,12 +3,13 @@
  */
 import React from "react";
 import ReactDom from "react-dom";
-require('../css/index.css');
+import CommonStyle from "../css/common.css";
+import IndexStyle from '../css/index.css';
 
 var Hello = React.createClass({
     render: function() {
-        return <div className="style">
-            <h2>Hello World</h2>
+        return <div className={IndexStyle.style}>
+            <h2 className={CommonStyle.red}>Hello World</h2>
             <p></p>
         </div>;
     }

@@ -29,7 +29,7 @@ module.exports = {
             // Extract css files
             {
                 test: /\.css$/,
-                loader: ExtractTextPlugin.extract("style-loader", "css-loader!postcss-loader!cssnext-loader")
+                loader: ExtractTextPlugin.extract("style-loader", "css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader!cssnext-loader")
             },
             // Optionally extract less files
             // or any other compile-to-css language

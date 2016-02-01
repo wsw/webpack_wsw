@@ -54,13 +54,19 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
+	var _common = __webpack_require__(159);
+
+	var _common2 = _interopRequireDefault(_common);
+
+	var _index = __webpack_require__(163);
+
+	var _index2 = _interopRequireDefault(_index);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	/**
 	 * Created by lanwenshuyu on 2015/11/8.
 	 */
-
-	__webpack_require__(159);
 
 	var Hello = _react2.default.createClass({
 	    displayName: "Hello",
@@ -68,10 +74,10 @@
 	    render: function render() {
 	        return _react2.default.createElement(
 	            "div",
-	            { className: "style" },
+	            { className: _index2.default.style },
 	            _react2.default.createElement(
 	                "h2",
-	                null,
+	                { className: _common2.default.red },
 	                "Hello World"
 	            ),
 	            _react2.default.createElement("p", null)
@@ -19673,6 +19679,17 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
+	module.exports = {"red":"common__red___1xISY"};
+
+/***/ },
+/* 160 */,
+/* 161 */,
+/* 162 */,
+/* 163 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"style":"index__style___234Lt"};
 
 /***/ }
 /******/ ]);
