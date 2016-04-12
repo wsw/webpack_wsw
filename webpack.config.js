@@ -10,7 +10,12 @@ module.exports = {
         index: "./js/index.js"
     },
     resolve: {
-        extensions: ['', '.js', '.jsx']
+        extensions: ['', '.js', '.jsx'],
+        alias: {
+            "react": "react/lib/React.js",
+            "react-dom": "react-dom/dist/react-dom.js",
+            "common.css": '../css/common.css'
+        }
     },
     output: {
         path: __dirname,
@@ -41,7 +46,8 @@ module.exports = {
                 test: /\.(png|jpg)$/,
                 loader: 'url-loader?limit=8192'
             }
-        ]
+        ],
+        noParse: []   //忽略对已知文件的解析
     },
     plugins: [
         new ExtractTextPlugin("[name].css"),
@@ -54,5 +60,6 @@ module.exports = {
     postcss: [AutoPrefixer, AutoReset({reset: {
       margin: 0,
       padding: 0
-    }})]
+    }})],
+    externals: {} //申明一个外部依赖，比如使用公用 CDN
 };

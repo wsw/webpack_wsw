@@ -3,7 +3,7 @@
  */
 import React from "react";
 import ReactDom from "react-dom";
-import CommonStyle from "../css/common.css";
+import CommonStyle from "common.css";
 import IndexStyle from '../css/index.css';
 
 var Hello = React.createClass({
