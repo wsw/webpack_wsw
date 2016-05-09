@@ -1,21 +1,2 @@
-.common__red___1xISY {
-  margin: 0;
-  padding: 0;
-}
-.common__red___1xISY {
-  color: red;
-}
-body,
-.index__style___234Lt,
-.index__style___234Lt p {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background: #333;
-}
-
-.index__style___234Lt { font-size: 30px; text-align: center; margin: 30px auto; }
-.index__style___234Lt p { width: 100px; height: 50px; border-radius: 10px;
-   background: blue; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex;}
+.common__red___1xISY{margin:0;padding:0;color:red}.index__style___234Lt,.index__style___234Lt p,body{margin:0;padding:0}body{background:#333}.index__style___234Lt{font-size:30px;text-align:center;margin:30px auto}.index__style___234Lt p{width:75pt;height:50px;border-radius:10px;background:blue;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
+/*# sourceMappingURL=index.css.map*/

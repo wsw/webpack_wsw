@@ -6,6 +6,7 @@ var AutoPrefixer = require('autoprefixer');
 var AutoReset = require('postcss-autoreset');
 
 module.exports = {
+    devtool: 'source-map',
     entry: {
         index: "./js/index.js"
     },
@@ -51,11 +52,13 @@ module.exports = {
     },
     plugins: [
         new ExtractTextPlugin("[name].css"),
-        // new UglifyJsPlugin({
-        //     compress: {
-        //         warnings: false
-        //     }
-        // })
+        new UglifyJsPlugin({
+            compress: {
+                warnings: false
+            }
+        }),
+        new webpack.optimize.DedupePlugin(),
+        new webpack.optimize.OccurenceOrderPlugin()
     ],
     postcss: [AutoPrefixer, AutoReset({reset: {
       margin: 0,
