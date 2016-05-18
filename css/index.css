@@ -1,10 +1,5 @@
 :root {
   --fontSize: 12px;
-  --bodyBgColor: #333;
-}
-
-body {
-  background: var(--bodyBgColor);
 }
 
 .style { font-size: 30px; text-align: center; margin: 30px auto; }
